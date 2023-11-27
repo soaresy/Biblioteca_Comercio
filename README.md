@@ -6,6 +6,45 @@
 
 ## Codigo
 
+CREATE DATABASE IF NOT EXISTS biblioteca;
+USE biblioteca;
+
+
+CREATE TABLE Livros (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Titulo VARCHAR(255),
+    ISBN VARCHAR(20),
+    AnoPublicacao INT
+);
+
+CREATE TABLE Autores (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Nome VARCHAR(255),
+    DataNascimento DATE,
+    Nacionalidade VARCHAR(100)
+);
+
+CREATE TABLE Editoras (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Nome VARCHAR(255),
+    Endereco VARCHAR(255)
+);
+
+CREATE TABLE Emprestimos (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    LivroID INT,
+    ClienteID INT,
+    DataEmprestimo DATE,
+    DataDevolucao DATE,
+    Status VARCHAR(20)
+);
+
+CREATE TABLE LivroAutor (
+    LivroID INT,
+    AutorID INT,
+    PRIMARY KEY (LivroID, AutorID)
+);
+
 
 DELIMITER //
 
@@ -60,3 +99,4 @@ CREATE VIEW ListaEmprestimos AS
 SELECT Livros.Titulo, Livros.ISBN, Emprestimos.DataEmprestimo, Emprestimos.DataDevolucao, Emprestimos.Status, Emprestimos.ClienteID
 FROM Livros
 INNER JOIN Emprestimos ON Livros.ID = Emprestimos.LivroID;
+
