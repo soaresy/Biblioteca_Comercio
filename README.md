@@ -1,8 +1,10 @@
-## Biblioteca_Comercio
+[Biblioteca.txt](https://github.com/soaresy/Biblioteca_Comercio/files/13481393/Biblioteca.txt)## Biblioteca_Comercio
 
-![image](https://github.com/soaresy/Biblioteca_Comercio/assets/144077766/28247cce-b199-4eb8-8a0e-95d3e3c60d37)
+![image](https://github.com/soaresy/Biblioteca_Comercio/assets/144077766/e4c5a057-3909-4d1c-aa5e-e91ef796dad3)
+
 
 
 ## Codigo
 
-[Uploading Biblioteca.sql…]()
+[Uploading Biblioteca.txt…]()
+
